@@ -9,7 +9,7 @@ import { APP_GUARD } from '@nestjs/core';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://comeeting:comeeting@cluster0.cjlvh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
+    MongooseModule.forRoot('mongodb+srv://comeeting:comeeting@cluster0.cjlvh.mongodb.net/comeeting-dev?retryWrites=true&w=majority'),
     UsersModule,
     AuthModule
   ],

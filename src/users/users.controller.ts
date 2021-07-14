@@ -1,6 +1,7 @@
 import { UserService } from './users.service';
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { User } from './user';
+import { Public } from 'src/app.decorator';
 
 @Controller('users')
 export class UsersController {
@@ -10,6 +11,7 @@ export class UsersController {
        
     }
 
+    @Public()
     @Get()
     async getAll(): Promise<User[]>{
         return this.userService.getAll();
@@ -20,6 +22,7 @@ export class UsersController {
         return this.userService.getById(id);
     }
 
+    @Public()
     @Post()
     async create(@Body() user:User): Promise<User>{
         return this.userService.create(user);
