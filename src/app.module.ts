@@ -23,3 +23,5 @@ import { APP_GUARD } from '@nestjs/core';
   ],
 })
 export class AppModule { }
+
+console.log('olá');
